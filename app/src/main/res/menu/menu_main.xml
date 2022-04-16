@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/vote_movie"
+        android:title="Votar Filme" />
+    <item
+        android:id="@+id/vote_director"
+        android:title="Votar Diretor" />
+    <item
+        android:id="@+id/confirm_vote"
+        android:title="Confirmar Voto" />
+    <item
+        android:id="@+id/logout"
+        android:title="Sair" />
+</menu>
