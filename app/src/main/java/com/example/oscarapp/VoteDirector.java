@@ -1,14 +1,10 @@
 package com.example.oscarapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatRadioButton;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
 import com.example.oscarapp.Model.Director;
 import com.example.oscarapp.apiMovie.RetrofitConfig;
 import java.util.List;
@@ -20,8 +16,6 @@ public class VoteDirector extends AppCompatActivity {
 
 
     List<Director> directorList;
-    RadioGroup rg = findViewById(R.id.rgDiretor);
-    RadioButton[] rb = new RadioButton[directorList.size()];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +35,7 @@ public class VoteDirector extends AppCompatActivity {
                 if(response.isSuccessful()){
                     directorList = response.body();
 
-                    for(int i = 0; i < directorList.size(); i++){
-                        Director director = directorList.get(i);
-                        rb[i].setText("\n"+director.getNome());
-                        rb[i].setId(i+1);
-                        rg.addView(rb[i]);
-                    }
+
                     progressDialog.dismiss();
                 }
             }
@@ -55,5 +44,9 @@ public class VoteDirector extends AppCompatActivity {
             public void onFailure(Call<List<Director>> call, Throwable t) {
             }
         });
+    }
+
+    public void btnVotarDiretor (View view){
+
     }
 }
