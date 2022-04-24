@@ -6,13 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".VoteDirector">
 
-    <TextView
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="203dp"
-        android:layout_marginEnd="194dp">
-
-    </TextView>
+        android:id="@+id/rgDiretor">
+    </RadioGroup>
 </RelativeLayout>
