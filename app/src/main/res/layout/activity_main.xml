@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,40 +9,44 @@
     >
 
     <ImageView
+
         android:id="@+id/imageViewOscar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="113dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="117dp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewToken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:drawablePadding="10dp"
+        android:src = "@drawable/oscar"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="289dp"
+        android:layout_below="@id/imageViewOscar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:drawablePadding="10dp"
         android:text="Seu token para votação é:"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageViewOscar"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewOscar" />
+        android:gravity="center"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textViewToken"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="225dp"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:text="Token"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewOscar" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:gravity="center"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

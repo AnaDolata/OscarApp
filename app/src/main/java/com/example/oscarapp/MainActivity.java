@@ -18,7 +18,7 @@ import com.example.oscarapp.VoteMovie;
 public class MainActivity extends AppCompatActivity {
 
     TextView textToken;
-    ImageView oscarImage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textToken = findViewById(R.id.textViewToken);
-        oscarImage = findViewById(R.id.imageViewOscar);
+
 
         //oscarImage.setImageResource(R.drawable.oscar);
         //textToken.setText(token.getText().toString());
