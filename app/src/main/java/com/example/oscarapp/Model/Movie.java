@@ -1,21 +1,38 @@
 package com.example.oscarapp.Model;
 
 public class Movie {
-    private String movie, director;
+    private String nome, genero, foto;
+    private int id;
 
-    public String getMovie() {
-        return movie;
+    public String getNome() {
+        return nome;
     }
 
-    public void setMovie(String movie) {
-        this.movie = movie;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getDirector() {
-        return director;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
