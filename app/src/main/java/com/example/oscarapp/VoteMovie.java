@@ -77,7 +77,7 @@ public class VoteMovie extends AppCompatActivity {
                                 Bundle params = new Bundle();
                                 params.putString("name", obj.getNome());
                                 params.putString("genre", obj.getGenero());
-                                //params.putString("img", obj.getFoto());
+                                params.putString("img", obj.getFoto());
                                 it.putExtras(params);
                                 startActivity(it);
                             }

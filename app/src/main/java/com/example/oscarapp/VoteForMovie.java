@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.oscarapp.apiMovie.DownloadTask;
+
 public class VoteForMovie extends AppCompatActivity {
 
     private TextView name, genero;
@@ -29,10 +31,11 @@ public class VoteForMovie extends AppCompatActivity {
             if(params != null){
                 String movieName = params.getString("name");
                 String movieGenre = params.getString("genre");
-                //img
+                String url = params.getString("img");
                 name.setText(movieName);
                 genero.setText(movieGenre);
-                //img
+                DownloadTask task = new DownloadTask(img);
+                task.execute(url);
             }
         }
     }

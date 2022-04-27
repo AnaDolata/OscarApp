@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oscarapp.Model.Movie;
 import com.example.oscarapp.R;
+import com.example.oscarapp.apiMovie.DownloadTask;
 
 import java.util.List;
 
@@ -49,7 +50,9 @@ public class AdapterMovies extends RecyclerView.Adapter<AdapterMovies.MyViewHold
         Movie obj = listMovies.get(position);
         holder.nome.setText(obj.getNome());
         holder.genero.setText(obj.getGenero());
-        //img
+        String url = obj.getFoto();
+        DownloadTask task = new DownloadTask(holder.img);
+        task.execute(url);
     }
 
     @Override
