@@ -34,8 +34,6 @@ public class VoteDirector extends AppCompatActivity {
             public void onResponse(Call<List<Director>> call, Response<List<Director>> response) {
                 if(response.isSuccessful()){
                     directorList = response.body();
-
-
                     progressDialog.dismiss();
                 }
             }
@@ -45,7 +43,6 @@ public class VoteDirector extends AppCompatActivity {
             }
         });
     }
-
     public void btnVotarDiretor (View view){
 
     }
