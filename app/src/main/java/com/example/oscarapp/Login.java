@@ -24,10 +24,15 @@ public class Login extends AppCompatActivity {
 
         String name = inputName.getText().toString();
         String password = inputPwrd.getText().toString();
-        String msg = "";
-        RequestTask task = new RequestTask(msg, Login.this);
-        task.execute(name);
 
+        //RequestTask task = new RequestTask(Login.this);
+        //task.execute(name);
+
+        Intent it = new Intent(this, MainActivity.class);
+        Bundle params = new Bundle();
+        params.putInt("token", 10);
+        it.putExtras(params);
+        startActivity(it);
 
     }
 }

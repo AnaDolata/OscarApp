@@ -14,7 +14,7 @@ public class VoteForMovie extends AppCompatActivity {
 
     private TextView name, genero;
     private ImageView img;
-    String voto;
+    public String votoFilme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +36,15 @@ public class VoteForMovie extends AppCompatActivity {
                 genero.setText(movieGenre);
                 DownloadTask task = new DownloadTask(img);
                 task.execute(url);
+                votoFilme = name.getText().toString();
             }
         }
     }
 
     public void voteMovie(View view){
-
+        votoFilme = name.getText().toString();
+        Intent it = new Intent(this, ConfirmVote.class);
+        it.putExtra("filme", votoFilme);
+        startActivity(it);
     }
 }

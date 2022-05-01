@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageViewMovie"
         android:layout_width="253dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="120"
         tools:srcCompat="@tools:sample/avatars" />
 

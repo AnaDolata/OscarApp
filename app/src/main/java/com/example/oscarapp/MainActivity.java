@@ -14,6 +14,7 @@ import com.example.oscarapp.ConfirmVote;
 import com.example.oscarapp.R;
 import com.example.oscarapp.VoteDirector;
 import com.example.oscarapp.VoteMovie;
+import com.example.oscarapp.apiMovie.DownloadTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         textToken = findViewById(R.id.textViewToken);
 
-
-        //oscarImage.setImageResource(R.drawable.oscar);
-        //textToken.setText(token.getText().toString());
-        //o token vem do servidor, é colocado na tela e tbm no BD
+        Intent it = getIntent();
+        if(it != null){
+            Bundle params = it.getExtras();
+            if(params != null){
+                int token = params.getInt("token");
+                textToken.setText(String.valueOf(token));
+            }
+        }
 
     }
 

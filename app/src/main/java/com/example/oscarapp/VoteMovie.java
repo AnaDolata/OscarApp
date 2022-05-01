@@ -28,6 +28,7 @@ public class VoteMovie extends AppCompatActivity {
 
     private List<Movie> movieList = new ArrayList<>();
     private RecyclerView recyclerViewMovies;
+    private AdapterMovies adapterMovies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class VoteMovie extends AppCompatActivity {
             public void onResponse(Call<List<Movie>> call, Response<List<Movie>> response) {
                 if(response.isSuccessful()) {
                     movieList = response.body();
-                    AdapterMovies adapterMovies = new AdapterMovies(movieList);
+                    adapterMovies = new AdapterMovies(movieList);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
                     recyclerViewMovies.setLayoutManager(layoutManager);
                     recyclerViewMovies.setHasFixedSize(true);
